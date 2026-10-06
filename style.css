@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #09070c;
+    color: white;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px 18px 40px;
+}
+/* Intro */
+.intro {
+    text-align: center;
+    padding: 45px 10px 50px;
+}
+.heart {
+    font-size: 38px;
+    margin-bottom: 18px;
+    animation: heartbeat 1.5s infinite;
+}
+.intro h1 {
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px #ff7ab8,
+        0 0 30px #ff4fa3;
+}
+.intro p {
+    margin-top: 14px;
+    color: #cfc7ce;
+    font-size: 15px;
+    font-style: italic;
+}
+/* Memories */
+.memories {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+.memory {
+    text-align: center;
+}
+.memory img {
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    background: #151118;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 0 12px rgba(255, 105, 180, 0.12),
+        0 15px 35px rgba(0, 0, 0, 0.5);
+}
+.memory p {
+    margin-top: 18px;
+    padding: 0 8px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 12px #ff75b5,
+        0 0 22px #ff3f9f;
+}
+/* Voice */
+.voice-section {
+    text-align: center;
+    margin-top: 80px;
+}
+.voice-section h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px #ff70b5;
+}
+.voice-box {
+    padding: 28px 18px;
+    border-radius: 20px;
+    background: #110d13;
+    border: 1px solid rgba(255, 120, 180, 0.25);
+    box-shadow:
+        0 0 20px rgba(255, 80, 160, 0.08);
+}
+.voice-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+.voice-box p {
+    color: #cfc7ce;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+audio {
+    width: 100%;
+}
+/* Ending */
+.ending {
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+.small-heart {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #ff7ab8;
+    text-shadow: 0 0 15px #ff4fa3;
+}
+.ending p {
+    color: #8e858c;
+    font-size: 13px;
+    font-style: italic;
+}
+/* Animation */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+/* Small phones */
+@media (max-width: 380px) {
+    .container {
+        padding: 20px 14px 35px;
+    }
+    .intro h1 {
+        font-size: 27px;
+    }
+    .memory img {
+        min-height: 300px;
+    }
+    .memory p {
+        font-size: 16px;
+    }
+}
+.memory {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: 1s ease;
+}
+
+.memory.show {
+    opacity: 1;
+    transform: translateY(0);
+}
